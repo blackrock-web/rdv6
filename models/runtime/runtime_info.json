@@ -1,0 +1,18 @@
+{
+  "defect_runtime": {
+    "model": "best.pt",
+    "task": "road_defect_detection",
+    "path": "models/custom/check_2.pt",
+    "ready": true
+  },
+  "object_runtime": {
+    "model": "yolov8n.pt",
+    "task": "general_object_detection",
+    "path": "models/candidates/yolov8n.pt",
+    "ready": true
+  },
+  "benchmark_winner": "none",
+  "benchmark_winner_id": "none",
+  "benchmark_winner_score": 0.0,
+  "note": "best.pt is ALWAYS the pothole/crack detection runtime. yolov8n.pt is ALWAYS the object detection runtime. Benchmark winner is tracked separately."
+}
