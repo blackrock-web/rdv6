@@ -1,14 +1,3 @@
----
-title: RoadAI Enterprise
-emoji: 🛣️
-colorFrom: purple
-colorTo: indigo
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
-
 # ROADAI v4.0 — Enterprise AI Road Analytics Platform 🛣️🤖
 
 **ROADAI** is an advanced, full-stack intelligence platform designed for real-time road health monitoring, defect detection, and predictive maintenance. This repository is optimized for **Hugging Face Spaces** (Backend) and **Netlify** (Frontend).
