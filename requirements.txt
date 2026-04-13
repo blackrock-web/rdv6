@@ -1,0 +1,61 @@
+# ============================================================
+# ROADAI v4.0 — Full Requirements
+# ============================================================
+# Core API
+fastapi>=0.115.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+pydantic>=2.12.0
+pydantic-settings>=2.7.0
+
+# Computer vision
+opencv-python-headless>=4.10.0
+numpy>=2.0.0
+Pillow>=12.0.0
+
+# Deep learning — YOLO
+ultralytics>=8.4.31
+onnxruntime>=1.17.0
+
+# Critical Fix for RequestsDependencyWarning
+urllib3>=1.26.18,<2
+charset-normalizer>=3.0.0,<4
+requests>=2.31.0
+
+# Deep learning — Segmentation + Depth (optional, real inference)
+# Install PyTorch first: https://pytorch.org/get-started/locally/
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ML — RUL model
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+scipy>=1.14.0
+
+# Authentication
+PyJWT==2.8.0
+
+# Reports
+reportlab==4.2.0
+
+# Async / utils
+aiofiles==23.2.1
+httpx==0.27.0
+python-dotenv==1.0.1
+motor>=3.6.0
+
+# SMS Alerts
+twilio>=8.0.0
+
+# Phase 2: Real-time & Queuing
+redis>=5.0.0
+celery>=5.4.0
+sse-starlette>=2.1.0
+prometheus-client>=0.17.1
+fpdf2>=2.7.4
+
+# ── Optional GPU ──────────────────────────────────────────────
+# CUDA PyTorch (NVIDIA GPU):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# Jetson (TensorRT):
+#   pip install tensorrt (from Jetson SDK)
