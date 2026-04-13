@@ -1,0 +1,81 @@
+.new-ui-container {
+  --nu-bg: transparent;
+  --nu-card: var(--card); 
+  --nu-card2: var(--input);
+  --nu-border: var(--border);
+  --nu-border2: rgba(168,85,247, 0.4);
+  --nu-purple: #7c5cfc;
+  --nu-pink: #e040fb;
+  --nu-cyan: #00e5ff;
+  --nu-green: #00e676;
+  --nu-orange: #ff6d00;
+  --nu-red: #f44336;
+  --nu-yellow: #fdd835;
+  --nu-t1: var(--foreground);
+  --nu-t2: var(--muted-foreground);
+  --nu-t3: rgba(168,85,247,0.8);
+  
+  font-family: 'DM Sans', 'Syne', sans-serif;
+  color: var(--nu-t1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.nu-content { 
+  flex: 1; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto auto; 
+  gap: 16px; 
+}
+
+/* CARDS */
+.nu-card { 
+  background: var(--nu-card); 
+  border-radius: 13px; 
+  border: 1px solid var(--nu-border); 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  animation: nu-fadeIn .4s ease both; 
+}
+@keyframes nu-fadeIn { from{opacity:0;transform:translateY(5px);} to{opacity:1;transform:translateY(0);} }
+.nu-ch { display:flex; align-items:center; justify-content:space-between; padding:11px 15px 8px; flex-shrink:0; border-bottom: 1px solid var(--nu-border); }
+.nu-ctitle { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; color: var(--nu-t1); }
+.nu-cact { display:flex; align-items:center; gap:4px; background:var(--nu-card2); border:1px solid var(--nu-border); border-radius:6px; padding:4px 9px; font-size:10px; color:var(--nu-t2); cursor:pointer; font-weight: bold; }
+.nu-cact:hover { color:var(--nu-t1); border-color: var(--nu-border2); }
+
+/* MAP/INPUT */
+.nu-map-card { grid-row: 1/3; grid-column: 1; animation-delay:.05s; display: flex; flex-direction: column;}
+.nu-mapwrap { flex:1; position:relative; overflow:hidden; display: flex; align-items: center; justify-content: center; min-height: 300px; background: rgba(0,0,0,0.2); }
+
+/* SCAN RESULTS */
+.nu-scan-card { grid-column: 1/3; grid-row: 3; animation-delay:.2s; display:flex; flex-direction:column;}
+.nu-detbox { flex:1; border-radius:9px; overflow:hidden; position:relative; background:#000; display:flex; align-items:center; justify-content:center; min-height: 400px;}
+.nu-detbox video, .nu-detbox img { width:100%; height:100%; object-fit:contain; }
+.nu-det-lbl { position:absolute; top:6px; left:7px; background:rgba(0,0,0,.78); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.13); border-radius:4px; padding:2px 6px; font-size:9px; z-index: 20; color: white;}
+
+/* CHARTS */
+.nu-freq-card { grid-column: 2; grid-row: 1; animation-delay:.1s; min-height: 200px; }
+.nu-crack-card { grid-column: 2; grid-row: 2; animation-delay:.15s; min-height: 200px; }
+.nu-chartwrap { flex:1; padding: 10px; position:relative; display: flex; width: 100%; min-height: 150px; }
+
+/* METRIC CARDS */
+.nu-mrow { grid-column: 1/3; display:grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap:12px; animation-delay:.25s; margin-top: 10px; }
+.nu-mcard { background:var(--nu-card); border-radius:11px; border:1px solid var(--nu-border); padding:11px 13px; display:flex; flex-direction:column; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.nu-mc-t { font-family:'Syne',sans-serif; font-size:12px; font-weight:700; margin-bottom:7px; color: var(--nu-t1); }
+.nu-mc-r { display:flex; align-items:center; gap:4px; margin-bottom:4px; }
+.nu-mc-d { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+.nu-mc-l { font-size:9px; color:var(--nu-t2); flex:1; margin:0;}
+.nu-mc-ln { height:2px; width:16px; border-radius:1px; }
+.nu-mc-p { font-size:9.5px; color:var(--nu-t2); margin:0;}
+.nu-mc-big { font-family:'Syne',sans-serif; font-size:24px; font-weight:800; margin-top:4px; line-height: 1;}
+.nu-mc-sub { font-size:8.5px; color:var(--nu-t3); margin-top:2px; font-weight: bold; }
+
+/* Inputs */
+.nu-input-control { width: 100%; border: 1px solid var(--nu-border); background: var(--nu-card2); color: var(--nu-t1); border-radius: 6px; padding: 8px 12px; font-size: 12px; outline: none; transition: border-color 0.2s;}
+.nu-input-control:focus { border-color: var(--nu-purple); }
+.nu-alert { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 8px 12px; border-radius: 8px; font-size: 11px; margin-top: 8px; }
