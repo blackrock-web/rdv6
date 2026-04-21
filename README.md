@@ -43,5 +43,5 @@
 - **Frontend**: React 18, Vite, TypeScript, Tailwind CSS.
 - **Database**: MongoDB Atlas.
 
-Developed with ❤️ by the SNIGDHA & ROADAI Engineering Team.
+Developed with ❤️ ROADAI Engineering Team.
 
